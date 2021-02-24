@@ -48,7 +48,7 @@ img {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -107,24 +107,6 @@ img {
   margin-left: auto;
 }
 
-/* .auth-nav .link::before {
-  display: block;
-  content: "";
-  height: 16px;
-  width: 16px;
-  margin-right: 10px;
-  outline: 1px solid red;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.icon-envelope::before {
-  background-image: url(../images/icons/envelope.svg);
-}
-
-.icon-smartphone::before {
-  background-image: url(../images/icons/smartphone.svg);
-} */
 
 .site-nav .iteam + .iteam {
   margin-left: 50px;
@@ -150,11 +132,30 @@ img {
   color: var(--description-color);
 }
 
+.auth-nav .iteam {
+  display: inline-flex;
+  align-items: center;
+}
+
+.auth-nav-icon {
+  margin-right: 10px;
+}
+
+.auth-nav-icon {
+  fill: #757575;
+}
+
+.auth-nav-icon:hover, 
+.auth-nav-icon:focus {
+  fill: var(--accent-color);
+}
+
 .site-nav .link:hover,
 .site-nav .link:focus,
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .link.used {
@@ -231,32 +232,16 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* .features .iteam::before {
-  display: block;
+.feature-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   content: "";
   height: 120px;
+  width: 270px;
   margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: #f5f4fa;
-  cursor: pointer;
 }
-
-.icon-antenna::before {
-  background-image: url(../images/icons/antenna.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/icons/clock.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/icons/diagram.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/icons/astronaut.svg);
-} */
 
 .features {
   display: flex;
@@ -330,6 +315,45 @@ img {
   text-align: center;
 }
 
+.social-links {
+  margin-top: 16px;
+  display: flex;
+}
+
+.social-links .iteam {
+  margin-right: 10px;
+  width: 44px;
+  height: 44px;
+}
+
+.social-links .iteam:last-child {
+  margin-right: 0;
+}
+
+.social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon {
+  fill: #afb1b8;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  fill: var(--white-color);
+}
+
+.social-icon:hover, 
+.social-icon:focus {
+  fill: var(--white-color);
+}
+
 /* Gallery */
 
 .gallery-section {
@@ -356,6 +380,13 @@ img {
   cursor: pointer;
 }
 
+.btn:hover, 
+.btn:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+  0px 1px 2px rgba(0, 0, 0, 0.08), 
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .btn:last-child {
   margin-right: 0;
 }
@@ -364,6 +395,9 @@ img {
   color: var(--white-color);
   background-color: var(--accent-color);
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+  0px 1px 2px rgba(0, 0, 0, 0.08), 
+  0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .btn:hover,
@@ -386,7 +420,8 @@ img {
   margin-bottom: 30px;
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -418,18 +453,17 @@ img {
 
 .clients {
   display: flex;
-  outline: 1px solid red;
 }
-/* 
+
 .client {
   margin-right: 30px;
   width: 170px;
   height: 90px;
-} */
+}
 
-/* .client:last-child {
+.client:last-child {
   margin-right: 0;
-} */
+}
 
 .icon-link {
   width: 100%;
@@ -441,9 +475,10 @@ img {
   border-radius: 5px;
 }
 
-.iteam {
-  width: 170px;
-  height: 90px;
+.client:hover, 
+.client:focus {
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
 }
 
 /* Footer */
@@ -475,4 +510,37 @@ img {
 
 .address .iteam + .iteam {
   margin-top: 9px;
+}
+
+.contacts {
+  display: flex;
+}
+
+.inform {
+  margin-right: 70px;
+}
+
+.join .title {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.join-link {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.join-icon {
+  fill: var(--white-color);
+}
+
+.join-link:hover,
+.join-link:focus {
+  background-color: var(--accent-color);
 }
