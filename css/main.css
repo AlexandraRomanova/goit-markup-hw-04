@@ -46,11 +46,9 @@ img {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1170px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  width: 1200px;
+  padding: 0 15px;
 }
 
 .picture {
@@ -60,8 +58,8 @@ img {
 /* Logo */
 
 .logo {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   color: #000000;
   font-family: Raleway, cursive;
   font-weight: bold;
@@ -72,11 +70,6 @@ img {
 
 .logo-part {
   color: var(--accent-color);
-}
-
-.logo:hover,
-.logo:focus {
-  text-decoration: underline var(--accent-color);
 }
 
 /* Header */
@@ -129,25 +122,14 @@ img {
 }
 
 .auth-nav .link {
-  color: var(--description-color);
-}
-
-.auth-nav .iteam {
   display: inline-flex;
+  color: var(--description-color);
+  fill: #757575;
   align-items: center;
 }
 
 .auth-nav-icon {
   margin-right: 10px;
-}
-
-.auth-nav-icon {
-  fill: #757575;
-}
-
-.auth-nav-icon:hover, 
-.auth-nav-icon:focus {
-  fill: var(--accent-color);
 }
 
 .site-nav .link:hover,
@@ -232,13 +214,17 @@ img {
   letter-spacing: 0.03em;
 }
 
+.features .iteam  {
+  width: 270px;
+  height: 251px;
+}
+
 .feature-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  content: "";
   height: 120px;
-  width: 270px;
+  width: 100%;
   margin-bottom: 30px;
   background-color: #f5f4fa;
 }
@@ -248,7 +234,7 @@ img {
 }
 
 .features .iteam + .iteam {
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 /* Works */
@@ -336,9 +322,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.social-icon {
   fill: #afb1b8;
 }
 
@@ -346,11 +329,6 @@ img {
 .social-link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
-  fill: var(--white-color);
-}
-
-.social-icon:hover, 
-.social-icon:focus {
   fill: var(--white-color);
 }
 
@@ -473,13 +451,20 @@ img {
   align-items: center;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
+  fill: #afb1b8;
 }
 
-.client:hover, 
-.client:focus {
+.icon-link:hover,
+.icon-link:focus {
   border: 1px solid var(--accent-color);
   border-radius: 5px;
+  fill: var(--accent-color);
+
 }
+
+/* .client:hover, 
+.client:focus {
+} */
 
 /* Footer */
 
@@ -504,6 +489,10 @@ img {
   letter-spacing: 0.03em;
 }
 
+.address .link:hover {
+  color: var(--white-color);
+}
+
 .link.place {
   color: var(--white-color);
 }
@@ -514,6 +503,7 @@ img {
 
 .contacts {
   display: flex;
+  align-items: baseline;
 }
 
 .inform {
@@ -521,7 +511,7 @@ img {
 }
 
 .join .title {
-  margin-top: 12px;
+  margin-top: 0;
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
